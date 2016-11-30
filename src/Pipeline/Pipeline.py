@@ -264,6 +264,19 @@ class Pipeline(object):
         EX_MEM_WRITE.ALU_Result = ID_EX_READ.Reg_Val1 + ID_EX_READ.Reg_Val2;
         """
         print('\n-------------EX-------------')
+        #EX/MEM Write
+        #IDEX_R_
+        self.EXMEM_W_MemRead = IDEX_R_MemRead
+        self.EXMEM_W_MemWrite = IDEX_R_MemWrite
+        self.EXMEM_W_Branch = IDEX_R_Branch
+        self.EXMEM_W_MemToReg = IDEX_R_MemToReg
+        self.EXMEM_W_RegWrite = IDEX_R_RegWrite
+        #self.EXMEM_W_CalcBTA = "????"  # This is for Branches
+        self.EXMEM_W_Zero = "????"
+
+        self.EXMEM_W_ALUResult = 0
+        self.EXMEM_W_SWValue = 0
+        self.EXMEM_W_WriteRegNum = 0
 
     def MEM_stage(self):
         """If the instruction is a lb, then use the address you calculated in
