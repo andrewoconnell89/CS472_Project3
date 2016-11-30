@@ -61,9 +61,6 @@ class Pipeline(object):
         self.IFID_R_Inst    = 0
         self.IFID_R_IncrPC  = 0
 
-
-
-
         #----------------------------------------------------------------------
         #ID/EX Write
         self.IDEX_W_RegDst = 0
@@ -101,7 +98,6 @@ class Pipeline(object):
         self.IDEX_R_WriteReg_15_11 = 0
         self.IDEX_R_Function = 0
 
-
         #----------------------------------------------------------------------
         #EX/MEM Write
         self.EXMEM_W_MemRead = 0
@@ -109,7 +105,6 @@ class Pipeline(object):
         self.EXMEM_W_Branch = 0
         self.EXMEM_W_MemToReg = 0
         self.EXMEM_W_RegWrite = 0
-        #self.EXMEM_W_CalcBTA = 0
         self.EXMEM_W_Zero = 0
         self.EXMEM_W_ALUResult = 0
 
@@ -122,13 +117,11 @@ class Pipeline(object):
         self.EXMEM_R_Branch = 0
         self.EXMEM_R_MemToReg = 0
         self.EXMEM_R_RegWrite = 0
-        #self.EXMEM_R_CalcBTA = 0
         self.EXMEM_R_Zero = 0
         self.EXMEM_R_ALUResult = 0
 
         self.EXMEM_R_SWValue = 0
         self.EXMEM_R_WriteRegNum = 0
-
 
         #----------------------------------------------------------------------
         #MEM/WB Write
@@ -151,23 +144,15 @@ class Pipeline(object):
     def IF_stage(self):
         """You will fetch the next instruction out of the Instruction Cache.
         Put it in the WRITE version of the IF/ID pipeline Register """
-        print('\n-------------IF-------------')
-        print("GlobalPC: {0:x}".format(self.PC))
         #IF/ID Write
-        self.IFID_W_Inst    = self.InstructionCache[self.PC]
-        self.IFID_W_IncrPC  = self.PC + 0x4
-
+        self.IFID_W_Inst = self.InstructionCache[self.PC]
+        self.IFID_W_IncrPC = self.PC + 0x4
         self.PC = self.PC + 0x4
-
-        # DEBUG
-        print("Inst: {0:x}".format(self.IFID_W_Inst))
-        print("IncrPC: {0:x}".format(self.IFID_W_IncrPC))
 
     def ID_stage(self):
         """Here you'll read an instruction from the READ version of IF/ID
         pipeline register, do the decoding and register fetching and write the
         values to the WRITE version of the ID/EX pipeline register."""
-        print('\n-------------ID-------------')
         # Null Operation Condition
         if self.IFID_R_Inst == 0:
             self.IDEX_W_RegDst = 0
@@ -185,18 +170,14 @@ class Pipeline(object):
             self.IDEX_W_WriteReg_20_16 = 0
             self.IDEX_W_WriteReg_15_11 = 0
             self.IDEX_W_Function = 0
-            print("ID_stage: nop")
+            #print("ID_stage: nop")
             return True
-
 
         d = Disassembler()
         d.load(self.IFID_R_Inst)
-        print("Instruction: {0:x}".format(self.IFID_R_Inst)," ",d)
-        print("IncrPC: {0:x}".format(self.IFID_R_IncrPC))
 
         # Set Control Variables
         if d.formatType == 'R':
-            print("R")
             self.IDEX_W_RegDst = 1
             self.IDEX_W_ALUSrc = 0
             self.IDEX_W_ALUOp = 2
@@ -211,7 +192,6 @@ class Pipeline(object):
             self.IDEX_W_WriteReg_20_16 = d.rs
             self.IDEX_W_WriteReg_15_11 = d.rd
             self.IDEX_W_Function = d.funct
-
         elif d.opcode == 0x20: #lb
             self.IDEX_W_RegDst = 0
             self.IDEX_W_ALUSrc = 1
@@ -243,13 +223,6 @@ class Pipeline(object):
             self.IDEX_W_WriteReg_15_11 = d.rt
             self.IDEX_W_Function = 'x'
 
-        print("ReadReg1Value: {0:x}".format(self.IDEX_W_ReadReg1Value))
-        print("ReadReg2Value: {0:x}".format(self.IDEX_W_ReadReg2Value))
-        print("SEOffset ",self.IDEX_W_SEOffset)
-        print("WriteReg_20_16 ",self.IDEX_W_WriteReg_20_16)
-        print("WriteReg_15_11 ",self.IDEX_W_WriteReg_15_11)
-        print("Function ",self.IDEX_W_Function)
-
     def EX_stage(self):
         """ Here you'll perform the requested instruction on the spicific
         operands you read out of the READ version of the ID/EX pipeline register
@@ -260,7 +233,6 @@ class Pipeline(object):
 
         EX_MEM_WRITE.ALU_Result = ID_EX_READ.Reg_Val1 + ID_EX_READ.Reg_Val2;
         """
-        print('\n-------------EX-------------')
         self.EXMEM_W_MemRead = self.IDEX_R_MemRead
         self.EXMEM_W_MemWrite = self.IDEX_R_MemWrite
         self.EXMEM_W_Branch = self.IDEX_R_Branch
@@ -284,6 +256,57 @@ class Pipeline(object):
         self.EXMEM_W_SWValue = self.IDEX_R_ReadReg2Value
         self.EXMEM_W_WriteRegNum = self.IDEX_R_WriteReg_15_11
 
+    def MEM_stage(self):
+        """If the instruction is a lb, then use the address you calculated in
+        the EX stage as an index into your Main Memory array and get the value
+        that is there.  Otherwise, just pass information from the READ version
+        of the EX_MEM pipeline register to the WRITE version of MEM_WB.
+        """
+        self.MEMWB_W_MemToReg = self.EXMEM_R_MemToReg
+        self.MEMWB_W_RegWrite = self.EXMEM_R_RegWrite
+
+        self.MEMWB_W_ALUResult = self.EXMEM_R_ALUResult
+        self.MEMWB_W_WriteRegNum = self.EXMEM_R_WriteRegNum
+
+        if self.EXMEM_R_MemToReg == 1:
+            #print("Loading x{0:x} from Main Mem[x{1:x}]".format(self.Main_Mem[self.EXMEM_R_ALUResult], self.EXMEM_R_ALUResult))
+            self.MEMWB_W_LWDataValue = self.Main_Mem[self.EXMEM_R_ALUResult]
+        else:
+            self.MEMWB_W_LWDataValue = 'x'
+        if self.EXMEM_R_MemWrite == 1:
+            #print("Storing x{0:x} to Main Mem[x{1:x}]".format(self.EXMEM_R_SWValue, self.EXMEM_R_ALUResult))
+            self.Main_Mem[self.EXMEM_R_ALUResult] = self.EXMEM_R_SWValue
+
+    def WB_stage(self):
+        """Write to the registers based on information you read out of the READ
+        version of MEM_WB.
+        """
+        # R-Format
+        if (self.MEMWB_R_MemToReg == 0) and (self.MEMWB_R_RegWrite == 1):
+            self.Regs[self.MEMWB_R_WriteRegNum] = self.MEMWB_R_ALUResult
+        # lb
+        elif (self.MEMWB_R_MemToReg == 1) and (self.MEMWB_R_RegWrite == 1):
+            self.Regs[self.MEMWB_R_WriteRegNum] = self.MEMWB_R_LWDataValue
+
+    def Print_out_everything(self):
+        #IF
+        print("GlobalPC: x{0:x}".format(self.PC))
+        print("Inst: x{0:x}".format(self.IFID_W_Inst))
+        print("IncrPC: x{0:x}".format(self.IFID_W_IncrPC))
+
+        #ID
+        print('\n-------------ID-------------')
+        print("Instruction: x{0:x}".format(self.IFID_R_Inst))
+        print("IncrPC: x{0:x}".format(self.IFID_R_IncrPC))
+        print("ReadReg1Value: x{0:x}".format(self.IDEX_W_ReadReg1Value))
+        print("ReadReg2Value: x{0:x}".format(self.IDEX_W_ReadReg2Value))
+        print("SEOffset: ",self.IDEX_W_SEOffset)
+        print("WriteReg_20_16: ",self.IDEX_W_WriteReg_20_16)
+        print("WriteReg_15_11: ",self.IDEX_W_WriteReg_15_11)
+        print("Function: ",self.IDEX_W_Function)
+
+        #EX
+        print('\n-------------EX-------------')
         print("MemRead: ", self.EXMEM_W_MemRead)
         print("MemWrite: ", self.EXMEM_W_MemWrite)
         print("Branch: ", self.EXMEM_W_Branch)
@@ -294,74 +317,21 @@ class Pipeline(object):
         print("SWValue: {0:x}".format(self.EXMEM_W_SWValue))
         print("WriteRegNum: ", self.EXMEM_W_WriteRegNum)
 
-    def MEM_stage(self):
-        """If the instruction is a lb, then use the address you calculated in
-        the EX stage as an index into your Main Memory array and get the value
-        that is there.  Otherwise, just pass information from the READ version
-        of the EX_MEM pipeline register to the WRITE version of MEM_WB.
-        """
+        #MEM
         print('\n-------------MEM-------------')
-
-        #----------------------------------------------------------------------
-        #MEM/WB Writ
-        self.MEMWB_W_MemToReg = self.EXMEM_R_MemToReg
-        self.MEMWB_W_RegWrite = self.EXMEM_R_RegWrite
-
-        self.MEMWB_W_ALUResult = self.EXMEM_R_ALUResult
-        self.MEMWB_W_WriteRegNum = self.EXMEM_R_WriteRegNum
-
-        if self.EXMEM_R_MemToReg == 1:
-            print("Loading x{0:x} from Main Mem[x{1:x}]".format(self.Main_Mem[self.EXMEM_R_ALUResult], self.EXMEM_R_ALUResult))
-            self.MEMWB_W_LWDataValue = self.Main_Mem[self.EXMEM_R_ALUResult]
-        else:
-            self.MEMWB_W_LWDataValue = 'x'
-
-        if self.EXMEM_R_MemWrite == 1:
-            print("Storing x{0:x} to Main Mem[x{1:x}]".format(self.EXMEM_R_SWValue, self.EXMEM_R_ALUResult))
-            self.Main_Mem[self.EXMEM_R_ALUResult] = self.EXMEM_R_SWValue
-
         print("MemToReg: ", self.MEMWB_W_MemToReg)
         print("RegWrite: ", self.MEMWB_W_RegWrite)
         print("ALUResult: {0:x}".format(self.MEMWB_W_ALUResult))
         print("WriteRegNum: ", self.MEMWB_W_WriteRegNum)
         print("LWDataValue: ", self.MEMWB_W_LWDataValue)
 
-
-
-    def WB_stage(self):
-        """Write to the registers based on information you read out of the READ
-        version of MEM_WB.
-        """
+        #WB
         print('\n-------------WB-------------')
-
-        # R-Format
-        if (self.MEMWB_R_MemToReg == 0) and (self.MEMWB_R_RegWrite == 1):
-
-            self.Regs[self.MEMWB_R_WriteRegNum] = self.MEMWB_R_ALUResult
-
-        # lb
-        elif (self.MEMWB_R_MemToReg == 1) and (self.MEMWB_R_RegWrite == 1):
-            self.Regs[self.MEMWB_R_WriteRegNum] = self.MEMWB_R_LWDataValue
-
-        # # sb
-        # elif (self.MEMWB_R_MemToReg == 'x') and (self.MEMWB_R_RegWrite == 1):
-        #     self.Main_Mem[self.MEMWB_R_ALUResult] = self.
-
-        # self.MEMWB_R_MemToReg = 0
-        # self.MEMWB_R_RegWrite = 0
-        #
-        # self.MEMWB_R_LWDataValue = 0
-        # self.MEMWB_R_ALUResult = 0
-        # self.MEMWB_R_WriteRegNum = 0
-
         print("MemToReg: ",self.MEMWB_R_MemToReg)
         print("RegWrite: ",self.MEMWB_R_RegWrite)
         print("LWDataValue: ",self.MEMWB_R_LWDataValue)
         print("ALUResult: {0:x}".format(self.MEMWB_R_ALUResult))
         print("WriteRegNum: ",self.MEMWB_R_WriteRegNum)
-
-    def Print_out_everything(self):
-        pass
 
     def Copy_write_to_read(self):
         #IF/ID Read

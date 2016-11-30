@@ -31,8 +31,8 @@ InstructionCache = {    0x7A000 : 0xa1020000,
 
 #Initalize new Pipeline object starting at specified PC
 p = Pipeline(startPC, InstructionCache)
-for i in range(12):
-    print('\n=========================== RUN %s ==============' % i)
+for i in range(1,13):
+    print('\n================ Clock Cycle %s ==============' % i)
     p.IF_stage()
     p.ID_stage()
     p.EX_stage()
