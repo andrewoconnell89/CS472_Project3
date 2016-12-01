@@ -1,0 +1,507 @@
+dhcp-wifi-8021x-155-41-66-215:src andyoconnell$ python3 main.py
+
+================ Clock Cycle 1 ==============
+GlobalPC: x7a004
+Inst: xa1020000
+IncrPC: x7a004
+
+-------------ID-------------
+Instruction: x0
+IncrPC: x0
+ReadReg1Value: x0
+ReadReg2Value: x0
+SEOffset:  0
+WriteReg_20_16:  0
+WriteReg_15_11:  0
+Function:  0
+
+-------------EX-------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  0
+Zero:  1
+ALUResult: 0
+SWValue: 0
+WriteRegNum:  0
+
+-------------MEM-------------
+MemToReg:  0
+RegWrite:  0
+ALUResult: 0
+WriteRegNum:  0
+LWDataValue:  x
+
+-------------WB-------------
+MemToReg:  0
+RegWrite:  0
+LWDataValue:  0
+ALUResult: 0
+WriteRegNum:  0
+
+================ Clock Cycle 2 ==============
+GlobalPC: x7a008
+Inst: x810afffc
+IncrPC: x7a008
+
+-------------ID-------------
+Instruction: xa1020000
+IncrPC: x7a004
+ReadReg1Value: x108
+ReadReg2Value: x102
+SEOffset:  0
+WriteReg_20_16:  8
+WriteReg_15_11:  2
+Function:  x
+
+-------------EX-------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  0
+Zero:  1
+ALUResult: 0
+SWValue: 0
+WriteRegNum:  0
+
+-------------MEM-------------
+MemToReg:  0
+RegWrite:  0
+ALUResult: 0
+WriteRegNum:  0
+LWDataValue:  x
+
+-------------WB-------------
+MemToReg:  0
+RegWrite:  0
+LWDataValue:  x
+ALUResult: 0
+WriteRegNum:  0
+
+================ Clock Cycle 3 ==============
+GlobalPC: x7a00c
+Inst: x831820
+IncrPC: x7a00c
+
+-------------ID-------------
+Instruction: x810afffc
+IncrPC: x7a008
+ReadReg1Value: x108
+ReadReg2Value: x10a
+SEOffset:  -4
+WriteReg_20_16:  8
+WriteReg_15_11:  10
+Function:  x
+
+-------------EX-------------
+MemRead:  0
+MemWrite:  1
+Branch:  0
+MemToReg:  x
+RegWrite:  0
+Zero:  0
+ALUResult: 108
+SWValue: 102
+WriteRegNum:  2
+
+-------------MEM-------------
+MemToReg:  0
+RegWrite:  0
+ALUResult: 0
+WriteRegNum:  0
+LWDataValue:  x
+
+-------------WB-------------
+MemToReg:  0
+RegWrite:  0
+LWDataValue:  x
+ALUResult: 0
+WriteRegNum:  0
+
+================ Clock Cycle 4 ==============
+GlobalPC: x7a010
+Inst: x1263820
+IncrPC: x7a010
+
+-------------ID-------------
+Instruction: x831820
+IncrPC: x7a00c
+ReadReg1Value: x104
+ReadReg2Value: x103
+SEOffset:  x
+WriteReg_20_16:  4
+WriteReg_15_11:  3
+Function:  32
+
+-------------EX-------------
+MemRead:  1
+MemWrite:  0
+Branch:  0
+MemToReg:  1
+RegWrite:  1
+Zero:  0
+ALUResult: 104
+SWValue: 10a
+WriteRegNum:  10
+
+-------------MEM-------------
+MemToReg:  x
+RegWrite:  0
+ALUResult: 108
+WriteRegNum:  2
+LWDataValue:  x
+
+-------------WB-------------
+MemToReg:  0
+RegWrite:  0
+LWDataValue:  x
+ALUResult: 0
+WriteRegNum:  0
+
+================ Clock Cycle 5 ==============
+GlobalPC: x7a014
+Inst: x1224820
+IncrPC: x7a014
+
+-------------ID-------------
+Instruction: x1263820
+IncrPC: x7a010
+ReadReg1Value: x109
+ReadReg2Value: x106
+SEOffset:  x
+WriteReg_20_16:  9
+WriteReg_15_11:  7
+Function:  32
+
+-------------EX-------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  1
+Zero:  0
+ALUResult: 207
+SWValue: 103
+WriteRegNum:  3
+
+-------------MEM-------------
+MemToReg:  1
+RegWrite:  1
+ALUResult: 104
+WriteRegNum:  10
+LWDataValue:  4
+
+-------------WB-------------
+MemToReg:  x
+RegWrite:  0
+LWDataValue:  x
+ALUResult: 108
+WriteRegNum:  2
+
+================ Clock Cycle 6 ==============
+GlobalPC: x7a018
+Inst: x81180000
+IncrPC: x7a018
+
+-------------ID-------------
+Instruction: x1224820
+IncrPC: x7a014
+ReadReg1Value: x109
+ReadReg2Value: x102
+SEOffset:  x
+WriteReg_20_16:  9
+WriteReg_15_11:  9
+Function:  32
+
+-------------EX-------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  1
+Zero:  0
+ALUResult: 20f
+SWValue: 106
+WriteRegNum:  7
+
+-------------MEM-------------
+MemToReg:  0
+RegWrite:  1
+ALUResult: 207
+WriteRegNum:  3
+LWDataValue:  x
+
+-------------WB-------------
+MemToReg:  1
+RegWrite:  1
+LWDataValue:  4
+ALUResult: 104
+WriteRegNum:  10
+
+================ Clock Cycle 7 ==============
+GlobalPC: x7a01c
+Inst: x81510010
+IncrPC: x7a01c
+
+-------------ID-------------
+Instruction: x81180000
+IncrPC: x7a018
+ReadReg1Value: x108
+ReadReg2Value: x118
+SEOffset:  0
+WriteReg_20_16:  8
+WriteReg_15_11:  24
+Function:  x
+
+-------------EX-------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  1
+Zero:  0
+ALUResult: 20b
+SWValue: 102
+WriteRegNum:  9
+
+-------------MEM-------------
+MemToReg:  0
+RegWrite:  1
+ALUResult: 20f
+WriteRegNum:  7
+LWDataValue:  x
+
+-------------WB-------------
+MemToReg:  0
+RegWrite:  1
+LWDataValue:  x
+ALUResult: 207
+WriteRegNum:  3
+
+================ Clock Cycle 8 ==============
+GlobalPC: x7a020
+Inst: x624022
+IncrPC: x7a020
+
+-------------ID-------------
+Instruction: x81510010
+IncrPC: x7a01c
+ReadReg1Value: x4
+ReadReg2Value: x111
+SEOffset:  16
+WriteReg_20_16:  10
+WriteReg_15_11:  17
+Function:  x
+
+-------------EX-------------
+MemRead:  1
+MemWrite:  0
+Branch:  0
+MemToReg:  1
+RegWrite:  1
+Zero:  0
+ALUResult: 108
+SWValue: 118
+WriteRegNum:  24
+
+-------------MEM-------------
+MemToReg:  0
+RegWrite:  1
+ALUResult: 20b
+WriteRegNum:  9
+LWDataValue:  x
+
+-------------WB-------------
+MemToReg:  0
+RegWrite:  1
+LWDataValue:  x
+ALUResult: 20f
+WriteRegNum:  7
+
+================ Clock Cycle 9 ==============
+GlobalPC: x7a024
+Inst: x0
+IncrPC: x7a024
+
+-------------ID-------------
+Instruction: x624022
+IncrPC: x7a020
+ReadReg1Value: x207
+ReadReg2Value: x102
+SEOffset:  x
+WriteReg_20_16:  3
+WriteReg_15_11:  8
+Function:  34
+
+-------------EX-------------
+MemRead:  1
+MemWrite:  0
+Branch:  0
+MemToReg:  1
+RegWrite:  1
+Zero:  0
+ALUResult: 14
+SWValue: 111
+WriteRegNum:  17
+
+-------------MEM-------------
+MemToReg:  1
+RegWrite:  1
+ALUResult: 108
+WriteRegNum:  24
+LWDataValue:  258
+
+-------------WB-------------
+MemToReg:  0
+RegWrite:  1
+LWDataValue:  x
+ALUResult: 20b
+WriteRegNum:  9
+
+================ Clock Cycle 10 ==============
+GlobalPC: x7a028
+Inst: x0
+IncrPC: x7a028
+
+-------------ID-------------
+Instruction: x0
+IncrPC: x7a024
+ReadReg1Value: x0
+ReadReg2Value: x0
+SEOffset:  0
+WriteReg_20_16:  0
+WriteReg_15_11:  0
+Function:  0
+
+-------------EX-------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  1
+Zero:  0
+ALUResult: 309
+SWValue: 102
+WriteRegNum:  8
+
+-------------MEM-------------
+MemToReg:  1
+RegWrite:  1
+ALUResult: 14
+WriteRegNum:  17
+LWDataValue:  20
+
+-------------WB-------------
+MemToReg:  1
+RegWrite:  1
+LWDataValue:  258
+ALUResult: 108
+WriteRegNum:  24
+
+================ Clock Cycle 11 ==============
+GlobalPC: x7a02c
+Inst: x0
+IncrPC: x7a02c
+
+-------------ID-------------
+Instruction: x0
+IncrPC: x7a028
+ReadReg1Value: x0
+ReadReg2Value: x0
+SEOffset:  0
+WriteReg_20_16:  0
+WriteReg_15_11:  0
+Function:  0
+
+-------------EX-------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  0
+Zero:  1
+ALUResult: 0
+SWValue: 0
+WriteRegNum:  0
+
+-------------MEM-------------
+MemToReg:  0
+RegWrite:  1
+ALUResult: 309
+WriteRegNum:  8
+LWDataValue:  x
+
+-------------WB-------------
+MemToReg:  1
+RegWrite:  1
+LWDataValue:  20
+ALUResult: 14
+WriteRegNum:  17
+
+================ Clock Cycle 12 ==============
+GlobalPC: x7a030
+Inst: x0
+IncrPC: x7a030
+
+-------------ID-------------
+Instruction: x0
+IncrPC: x7a02c
+ReadReg1Value: x0
+ReadReg2Value: x0
+SEOffset:  0
+WriteReg_20_16:  0
+WriteReg_15_11:  0
+Function:  0
+
+-------------EX-------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  0
+Zero:  1
+ALUResult: 0
+SWValue: 0
+WriteRegNum:  0
+
+-------------MEM-------------
+MemToReg:  0
+RegWrite:  0
+ALUResult: 0
+WriteRegNum:  0
+LWDataValue:  x
+
+-------------WB-------------
+MemToReg:  0
+RegWrite:  1
+LWDataValue:  x
+ALUResult: 309
+WriteRegNum:  8
+
+---------UNIT TESTING BELOW-------------------
+
+Test1: sb $2 0($8) -- Value should be x102
+     Main_Mem[x108] = x102
+
+Test2: lb $10 -4($8) -- Value should be x4
+     Regs[10] = x4
+
+Test3: add $3 $4 $3 -- Value should be x207
+     Regs[3] = x207
+
+Test4: add $7 $9 $6 -- Value should be x20F
+     Regs[7] = x20f
+
+Test5: add $9 $9 $2 -- Value should be x20B
+     Regs[9] = x20b
+
+Test6: lb $24 0($8) -- Value should be x102 (due to instruction in 1)
+     Regs[24] = x102
+
+Test7: lb $17 16($10) -- Value should be x14 ($10=x4+x10 then Main_Mem[x14]=x14  Register 10 was changed in test2)
+     Regs[17] = x14
+
+Test8: sub $8 $3 $2 -- Value should be x309
+     Regs[8] = x309
