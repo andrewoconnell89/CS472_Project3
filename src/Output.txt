@@ -1,4 +1,4 @@
-dhcp-wifi-8021x-155-41-66-215:src andyoconnell$ python3 main.py
+Andys-MacBook-Pro:src andyoconnell$ python3 main.py 
 
 ================ Clock Cycle 1 ==============
 GlobalPC: x7a004
@@ -40,6 +40,40 @@ LWDataValue:  0
 ALUResult: 0
 WriteRegNum:  0
 
+------------Registers-------------
+Regs[0] = 0
+Regs[1] = 101
+Regs[2] = 102
+Regs[3] = 103
+Regs[4] = 104
+Regs[5] = 105
+Regs[6] = 106
+Regs[7] = 107
+Regs[8] = 108
+Regs[9] = 109
+Regs[10] = 10a
+Regs[11] = 10b
+Regs[12] = 10c
+Regs[13] = 10d
+Regs[14] = 10e
+Regs[15] = 10f
+Regs[16] = 110
+Regs[17] = 111
+Regs[18] = 112
+Regs[19] = 113
+Regs[20] = 114
+Regs[21] = 115
+Regs[22] = 116
+Regs[23] = 117
+Regs[24] = 118
+Regs[25] = 119
+Regs[26] = 11a
+Regs[27] = 11b
+Regs[28] = 11c
+Regs[29] = 11d
+Regs[30] = 11e
+Regs[31] = 11f
+
 ================ Clock Cycle 2 ==============
 GlobalPC: x7a008
 Inst: x810afffc
@@ -79,6 +113,40 @@ RegWrite:  0
 LWDataValue:  x
 ALUResult: 0
 WriteRegNum:  0
+
+------------Registers-------------
+Regs[0] = 0
+Regs[1] = 101
+Regs[2] = 102
+Regs[3] = 103
+Regs[4] = 104
+Regs[5] = 105
+Regs[6] = 106
+Regs[7] = 107
+Regs[8] = 108
+Regs[9] = 109
+Regs[10] = 10a
+Regs[11] = 10b
+Regs[12] = 10c
+Regs[13] = 10d
+Regs[14] = 10e
+Regs[15] = 10f
+Regs[16] = 110
+Regs[17] = 111
+Regs[18] = 112
+Regs[19] = 113
+Regs[20] = 114
+Regs[21] = 115
+Regs[22] = 116
+Regs[23] = 117
+Regs[24] = 118
+Regs[25] = 119
+Regs[26] = 11a
+Regs[27] = 11b
+Regs[28] = 11c
+Regs[29] = 11d
+Regs[30] = 11e
+Regs[31] = 11f
 
 ================ Clock Cycle 3 ==============
 GlobalPC: x7a00c
@@ -120,6 +188,40 @@ LWDataValue:  x
 ALUResult: 0
 WriteRegNum:  0
 
+------------Registers-------------
+Regs[0] = 0
+Regs[1] = 101
+Regs[2] = 102
+Regs[3] = 103
+Regs[4] = 104
+Regs[5] = 105
+Regs[6] = 106
+Regs[7] = 107
+Regs[8] = 108
+Regs[9] = 109
+Regs[10] = 10a
+Regs[11] = 10b
+Regs[12] = 10c
+Regs[13] = 10d
+Regs[14] = 10e
+Regs[15] = 10f
+Regs[16] = 110
+Regs[17] = 111
+Regs[18] = 112
+Regs[19] = 113
+Regs[20] = 114
+Regs[21] = 115
+Regs[22] = 116
+Regs[23] = 117
+Regs[24] = 118
+Regs[25] = 119
+Regs[26] = 11a
+Regs[27] = 11b
+Regs[28] = 11c
+Regs[29] = 11d
+Regs[30] = 11e
+Regs[31] = 11f
+
 ================ Clock Cycle 4 ==============
 GlobalPC: x7a010
 Inst: x1263820
@@ -159,6 +261,40 @@ RegWrite:  0
 LWDataValue:  x
 ALUResult: 0
 WriteRegNum:  0
+
+------------Registers-------------
+Regs[0] = 0
+Regs[1] = 101
+Regs[2] = 102
+Regs[3] = 103
+Regs[4] = 104
+Regs[5] = 105
+Regs[6] = 106
+Regs[7] = 107
+Regs[8] = 108
+Regs[9] = 109
+Regs[10] = 10a
+Regs[11] = 10b
+Regs[12] = 10c
+Regs[13] = 10d
+Regs[14] = 10e
+Regs[15] = 10f
+Regs[16] = 110
+Regs[17] = 111
+Regs[18] = 112
+Regs[19] = 113
+Regs[20] = 114
+Regs[21] = 115
+Regs[22] = 116
+Regs[23] = 117
+Regs[24] = 118
+Regs[25] = 119
+Regs[26] = 11a
+Regs[27] = 11b
+Regs[28] = 11c
+Regs[29] = 11d
+Regs[30] = 11e
+Regs[31] = 11f
 
 ================ Clock Cycle 5 ==============
 GlobalPC: x7a014
@@ -200,6 +336,40 @@ LWDataValue:  x
 ALUResult: 108
 WriteRegNum:  2
 
+------------Registers-------------
+Regs[0] = 0
+Regs[1] = 101
+Regs[2] = 102
+Regs[3] = 103
+Regs[4] = 104
+Regs[5] = 105
+Regs[6] = 106
+Regs[7] = 107
+Regs[8] = 108
+Regs[9] = 109
+Regs[10] = 10a
+Regs[11] = 10b
+Regs[12] = 10c
+Regs[13] = 10d
+Regs[14] = 10e
+Regs[15] = 10f
+Regs[16] = 110
+Regs[17] = 111
+Regs[18] = 112
+Regs[19] = 113
+Regs[20] = 114
+Regs[21] = 115
+Regs[22] = 116
+Regs[23] = 117
+Regs[24] = 118
+Regs[25] = 119
+Regs[26] = 11a
+Regs[27] = 11b
+Regs[28] = 11c
+Regs[29] = 11d
+Regs[30] = 11e
+Regs[31] = 11f
+
 ================ Clock Cycle 6 ==============
 GlobalPC: x7a018
 Inst: x81180000
@@ -239,6 +409,40 @@ RegWrite:  1
 LWDataValue:  4
 ALUResult: 104
 WriteRegNum:  10
+
+------------Registers-------------
+Regs[0] = 0
+Regs[1] = 101
+Regs[2] = 102
+Regs[3] = 103
+Regs[4] = 104
+Regs[5] = 105
+Regs[6] = 106
+Regs[7] = 107
+Regs[8] = 108
+Regs[9] = 109
+Regs[10] = 4
+Regs[11] = 10b
+Regs[12] = 10c
+Regs[13] = 10d
+Regs[14] = 10e
+Regs[15] = 10f
+Regs[16] = 110
+Regs[17] = 111
+Regs[18] = 112
+Regs[19] = 113
+Regs[20] = 114
+Regs[21] = 115
+Regs[22] = 116
+Regs[23] = 117
+Regs[24] = 118
+Regs[25] = 119
+Regs[26] = 11a
+Regs[27] = 11b
+Regs[28] = 11c
+Regs[29] = 11d
+Regs[30] = 11e
+Regs[31] = 11f
 
 ================ Clock Cycle 7 ==============
 GlobalPC: x7a01c
@@ -280,6 +484,40 @@ LWDataValue:  x
 ALUResult: 207
 WriteRegNum:  3
 
+------------Registers-------------
+Regs[0] = 0
+Regs[1] = 101
+Regs[2] = 102
+Regs[3] = 207
+Regs[4] = 104
+Regs[5] = 105
+Regs[6] = 106
+Regs[7] = 107
+Regs[8] = 108
+Regs[9] = 109
+Regs[10] = 4
+Regs[11] = 10b
+Regs[12] = 10c
+Regs[13] = 10d
+Regs[14] = 10e
+Regs[15] = 10f
+Regs[16] = 110
+Regs[17] = 111
+Regs[18] = 112
+Regs[19] = 113
+Regs[20] = 114
+Regs[21] = 115
+Regs[22] = 116
+Regs[23] = 117
+Regs[24] = 118
+Regs[25] = 119
+Regs[26] = 11a
+Regs[27] = 11b
+Regs[28] = 11c
+Regs[29] = 11d
+Regs[30] = 11e
+Regs[31] = 11f
+
 ================ Clock Cycle 8 ==============
 GlobalPC: x7a020
 Inst: x624022
@@ -319,6 +557,40 @@ RegWrite:  1
 LWDataValue:  x
 ALUResult: 20f
 WriteRegNum:  7
+
+------------Registers-------------
+Regs[0] = 0
+Regs[1] = 101
+Regs[2] = 102
+Regs[3] = 207
+Regs[4] = 104
+Regs[5] = 105
+Regs[6] = 106
+Regs[7] = 20f
+Regs[8] = 108
+Regs[9] = 109
+Regs[10] = 4
+Regs[11] = 10b
+Regs[12] = 10c
+Regs[13] = 10d
+Regs[14] = 10e
+Regs[15] = 10f
+Regs[16] = 110
+Regs[17] = 111
+Regs[18] = 112
+Regs[19] = 113
+Regs[20] = 114
+Regs[21] = 115
+Regs[22] = 116
+Regs[23] = 117
+Regs[24] = 118
+Regs[25] = 119
+Regs[26] = 11a
+Regs[27] = 11b
+Regs[28] = 11c
+Regs[29] = 11d
+Regs[30] = 11e
+Regs[31] = 11f
 
 ================ Clock Cycle 9 ==============
 GlobalPC: x7a024
@@ -360,6 +632,40 @@ LWDataValue:  x
 ALUResult: 20b
 WriteRegNum:  9
 
+------------Registers-------------
+Regs[0] = 0
+Regs[1] = 101
+Regs[2] = 102
+Regs[3] = 207
+Regs[4] = 104
+Regs[5] = 105
+Regs[6] = 106
+Regs[7] = 20f
+Regs[8] = 108
+Regs[9] = 20b
+Regs[10] = 4
+Regs[11] = 10b
+Regs[12] = 10c
+Regs[13] = 10d
+Regs[14] = 10e
+Regs[15] = 10f
+Regs[16] = 110
+Regs[17] = 111
+Regs[18] = 112
+Regs[19] = 113
+Regs[20] = 114
+Regs[21] = 115
+Regs[22] = 116
+Regs[23] = 117
+Regs[24] = 118
+Regs[25] = 119
+Regs[26] = 11a
+Regs[27] = 11b
+Regs[28] = 11c
+Regs[29] = 11d
+Regs[30] = 11e
+Regs[31] = 11f
+
 ================ Clock Cycle 10 ==============
 GlobalPC: x7a028
 Inst: x0
@@ -399,6 +705,40 @@ RegWrite:  1
 LWDataValue:  258
 ALUResult: 108
 WriteRegNum:  24
+
+------------Registers-------------
+Regs[0] = 0
+Regs[1] = 101
+Regs[2] = 102
+Regs[3] = 207
+Regs[4] = 104
+Regs[5] = 105
+Regs[6] = 106
+Regs[7] = 20f
+Regs[8] = 108
+Regs[9] = 20b
+Regs[10] = 4
+Regs[11] = 10b
+Regs[12] = 10c
+Regs[13] = 10d
+Regs[14] = 10e
+Regs[15] = 10f
+Regs[16] = 110
+Regs[17] = 111
+Regs[18] = 112
+Regs[19] = 113
+Regs[20] = 114
+Regs[21] = 115
+Regs[22] = 116
+Regs[23] = 117
+Regs[24] = 102
+Regs[25] = 119
+Regs[26] = 11a
+Regs[27] = 11b
+Regs[28] = 11c
+Regs[29] = 11d
+Regs[30] = 11e
+Regs[31] = 11f
 
 ================ Clock Cycle 11 ==============
 GlobalPC: x7a02c
@@ -440,6 +780,40 @@ LWDataValue:  20
 ALUResult: 14
 WriteRegNum:  17
 
+------------Registers-------------
+Regs[0] = 0
+Regs[1] = 101
+Regs[2] = 102
+Regs[3] = 207
+Regs[4] = 104
+Regs[5] = 105
+Regs[6] = 106
+Regs[7] = 20f
+Regs[8] = 108
+Regs[9] = 20b
+Regs[10] = 4
+Regs[11] = 10b
+Regs[12] = 10c
+Regs[13] = 10d
+Regs[14] = 10e
+Regs[15] = 10f
+Regs[16] = 110
+Regs[17] = 14
+Regs[18] = 112
+Regs[19] = 113
+Regs[20] = 114
+Regs[21] = 115
+Regs[22] = 116
+Regs[23] = 117
+Regs[24] = 102
+Regs[25] = 119
+Regs[26] = 11a
+Regs[27] = 11b
+Regs[28] = 11c
+Regs[29] = 11d
+Regs[30] = 11e
+Regs[31] = 11f
+
 ================ Clock Cycle 12 ==============
 GlobalPC: x7a030
 Inst: x0
@@ -479,6 +853,40 @@ RegWrite:  1
 LWDataValue:  x
 ALUResult: 309
 WriteRegNum:  8
+
+------------Registers-------------
+Regs[0] = 0
+Regs[1] = 101
+Regs[2] = 102
+Regs[3] = 207
+Regs[4] = 104
+Regs[5] = 105
+Regs[6] = 106
+Regs[7] = 20f
+Regs[8] = 309
+Regs[9] = 20b
+Regs[10] = 4
+Regs[11] = 10b
+Regs[12] = 10c
+Regs[13] = 10d
+Regs[14] = 10e
+Regs[15] = 10f
+Regs[16] = 110
+Regs[17] = 14
+Regs[18] = 112
+Regs[19] = 113
+Regs[20] = 114
+Regs[21] = 115
+Regs[22] = 116
+Regs[23] = 117
+Regs[24] = 102
+Regs[25] = 119
+Regs[26] = 11a
+Regs[27] = 11b
+Regs[28] = 11c
+Regs[29] = 11d
+Regs[30] = 11e
+Regs[31] = 11f
 
 ---------UNIT TESTING BELOW-------------------
 

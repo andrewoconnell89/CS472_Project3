@@ -333,6 +333,10 @@ class Pipeline(object):
         print("ALUResult: {0:x}".format(self.MEMWB_R_ALUResult))
         print("WriteRegNum: ",self.MEMWB_R_WriteRegNum)
 
+        print("\n------------Registers-------------")
+        for i in range(len(self.Regs)):
+            print("Regs[{0:d}] = {1:x}".format(i, self.Regs[i]))
+
     def Copy_write_to_read(self):
         #IF/ID Read
         self.IFID_R_Inst        = self.IFID_W_Inst
