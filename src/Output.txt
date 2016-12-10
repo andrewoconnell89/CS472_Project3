@@ -1,21 +1,48 @@
-Andys-MacBook-Pro:src andyoconnell$ python3 main.py 
+Andys-MacBook-Pro:src andyoconnell$ python3 main.py
 
 ================ Clock Cycle 1 ==============
 GlobalPC: x7a004
 Inst: xa1020000
 IncrPC: x7a004
 
--------------ID-------------
-Instruction: x0
-IncrPC: x0
-ReadReg1Value: x0
-ReadReg2Value: x0
+IF/ID Write ----------------
+Inst = xa1020000
+IF/ID Read ------------------
+Inst = x0
+
+ID/EX Write ----------------
+RegDst:  0
+ALUSrc:  0
+ALUOp:  0
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  0
+IncrPC: 0
+ReadReg1Value: 0
+ReadReg2Value: 0
 SEOffset:  0
 WriteReg_20_16:  0
 WriteReg_15_11:  0
 Function:  0
 
--------------EX-------------
+ID/EX Read ------------------
+RegDst:  0
+ALUSrc:  0
+ALUOp:  0
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  0
+IncrPC: 0
+ReadReg1Value: 0
+ReadReg2Value: 0
+SEOffset:  0
+WriteReg_20_16:  0
+WriteReg_15_11:  0
+Function:  0
+
+EX/MEM Write-------------------
 MemRead:  0
 MemWrite:  0
 Branch:  0
@@ -26,19 +53,30 @@ ALUResult: 0
 SWValue: 0
 WriteRegNum:  0
 
--------------MEM-------------
+EX/MEM Read-------------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  0
+Zero:  0
+ALUResult: 0
+SWValue: 0
+WriteRegNum:  0
+
+MEM/WB Write-----------------------
 MemToReg:  0
 RegWrite:  0
 ALUResult: 0
 WriteRegNum:  0
 LWDataValue:  x
 
--------------WB-------------
+MEM/WB Read-----------------------
 MemToReg:  0
 RegWrite:  0
-LWDataValue:  0
 ALUResult: 0
 WriteRegNum:  0
+LWDataValue:  0
 
 ------------Registers-------------
 Regs[0] = 0
@@ -79,17 +117,44 @@ GlobalPC: x7a008
 Inst: x810afffc
 IncrPC: x7a008
 
--------------ID-------------
-Instruction: xa1020000
-IncrPC: x7a004
-ReadReg1Value: x108
-ReadReg2Value: x102
+IF/ID Write ----------------
+Inst = x810afffc
+IF/ID Read ------------------
+Inst = xa1020000
+
+ID/EX Write ----------------
+RegDst:  x
+ALUSrc:  1
+ALUOp:  0
+MemRead:  0
+Memwrite:  1
+MemToReg:  x
+RegWrite:  0
+IncrPC: 0
+ReadReg1Value: 108
+ReadReg2Value: 102
 SEOffset:  0
 WriteReg_20_16:  8
 WriteReg_15_11:  2
 Function:  x
 
--------------EX-------------
+ID/EX Read ------------------
+RegDst:  0
+ALUSrc:  0
+ALUOp:  0
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  0
+IncrPC: 0
+ReadReg1Value: 0
+ReadReg2Value: 0
+SEOffset:  0
+WriteReg_20_16:  0
+WriteReg_15_11:  0
+Function:  0
+
+EX/MEM Write-------------------
 MemRead:  0
 MemWrite:  0
 Branch:  0
@@ -100,19 +165,30 @@ ALUResult: 0
 SWValue: 0
 WriteRegNum:  0
 
--------------MEM-------------
+EX/MEM Read-------------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  0
+Zero:  1
+ALUResult: 0
+SWValue: 0
+WriteRegNum:  0
+
+MEM/WB Write-----------------------
 MemToReg:  0
 RegWrite:  0
 ALUResult: 0
 WriteRegNum:  0
 LWDataValue:  x
 
--------------WB-------------
+MEM/WB Read-----------------------
 MemToReg:  0
 RegWrite:  0
-LWDataValue:  x
 ALUResult: 0
 WriteRegNum:  0
+LWDataValue:  x
 
 ------------Registers-------------
 Regs[0] = 0
@@ -153,17 +229,44 @@ GlobalPC: x7a00c
 Inst: x831820
 IncrPC: x7a00c
 
--------------ID-------------
-Instruction: x810afffc
-IncrPC: x7a008
-ReadReg1Value: x108
-ReadReg2Value: x10a
+IF/ID Write ----------------
+Inst = x831820
+IF/ID Read ------------------
+Inst = x810afffc
+
+ID/EX Write ----------------
+RegDst:  0
+ALUSrc:  1
+ALUOp:  0
+MemRead:  1
+Memwrite:  0
+MemToReg:  1
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 108
+ReadReg2Value: 10a
 SEOffset:  -4
 WriteReg_20_16:  8
 WriteReg_15_11:  10
 Function:  x
 
--------------EX-------------
+ID/EX Read ------------------
+RegDst:  x
+ALUSrc:  1
+ALUOp:  0
+MemRead:  0
+Memwrite:  1
+MemToReg:  x
+RegWrite:  0
+IncrPC: 0
+ReadReg1Value: 108
+ReadReg2Value: 102
+SEOffset:  0
+WriteReg_20_16:  8
+WriteReg_15_11:  2
+Function:  x
+
+EX/MEM Write-------------------
 MemRead:  0
 MemWrite:  1
 Branch:  0
@@ -174,19 +277,30 @@ ALUResult: 108
 SWValue: 102
 WriteRegNum:  2
 
--------------MEM-------------
+EX/MEM Read-------------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  0
+Zero:  1
+ALUResult: 0
+SWValue: 0
+WriteRegNum:  0
+
+MEM/WB Write-----------------------
 MemToReg:  0
 RegWrite:  0
 ALUResult: 0
 WriteRegNum:  0
 LWDataValue:  x
 
--------------WB-------------
+MEM/WB Read-----------------------
 MemToReg:  0
 RegWrite:  0
-LWDataValue:  x
 ALUResult: 0
 WriteRegNum:  0
+LWDataValue:  x
 
 ------------Registers-------------
 Regs[0] = 0
@@ -227,17 +341,44 @@ GlobalPC: x7a010
 Inst: x1263820
 IncrPC: x7a010
 
--------------ID-------------
-Instruction: x831820
-IncrPC: x7a00c
-ReadReg1Value: x104
-ReadReg2Value: x103
+IF/ID Write ----------------
+Inst = x1263820
+IF/ID Read ------------------
+Inst = x831820
+
+ID/EX Write ----------------
+RegDst:  1
+ALUSrc:  0
+ALUOp:  2
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 104
+ReadReg2Value: 103
 SEOffset:  x
 WriteReg_20_16:  4
 WriteReg_15_11:  3
 Function:  32
 
--------------EX-------------
+ID/EX Read ------------------
+RegDst:  0
+ALUSrc:  1
+ALUOp:  0
+MemRead:  1
+Memwrite:  0
+MemToReg:  1
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 108
+ReadReg2Value: 10a
+SEOffset:  -4
+WriteReg_20_16:  8
+WriteReg_15_11:  10
+Function:  x
+
+EX/MEM Write-------------------
 MemRead:  1
 MemWrite:  0
 Branch:  0
@@ -248,19 +389,30 @@ ALUResult: 104
 SWValue: 10a
 WriteRegNum:  10
 
--------------MEM-------------
+EX/MEM Read-------------------
+MemRead:  0
+MemWrite:  1
+Branch:  0
+MemToReg:  x
+RegWrite:  0
+Zero:  0
+ALUResult: 108
+SWValue: 102
+WriteRegNum:  2
+
+MEM/WB Write-----------------------
 MemToReg:  x
 RegWrite:  0
 ALUResult: 108
 WriteRegNum:  2
 LWDataValue:  x
 
--------------WB-------------
+MEM/WB Read-----------------------
 MemToReg:  0
 RegWrite:  0
-LWDataValue:  x
 ALUResult: 0
 WriteRegNum:  0
+LWDataValue:  x
 
 ------------Registers-------------
 Regs[0] = 0
@@ -301,17 +453,44 @@ GlobalPC: x7a014
 Inst: x1224820
 IncrPC: x7a014
 
--------------ID-------------
-Instruction: x1263820
-IncrPC: x7a010
-ReadReg1Value: x109
-ReadReg2Value: x106
+IF/ID Write ----------------
+Inst = x1224820
+IF/ID Read ------------------
+Inst = x1263820
+
+ID/EX Write ----------------
+RegDst:  1
+ALUSrc:  0
+ALUOp:  2
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 109
+ReadReg2Value: 106
 SEOffset:  x
 WriteReg_20_16:  9
 WriteReg_15_11:  7
 Function:  32
 
--------------EX-------------
+ID/EX Read ------------------
+RegDst:  1
+ALUSrc:  0
+ALUOp:  2
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 104
+ReadReg2Value: 103
+SEOffset:  x
+WriteReg_20_16:  4
+WriteReg_15_11:  3
+Function:  32
+
+EX/MEM Write-------------------
 MemRead:  0
 MemWrite:  0
 Branch:  0
@@ -322,19 +501,30 @@ ALUResult: 207
 SWValue: 103
 WriteRegNum:  3
 
--------------MEM-------------
+EX/MEM Read-------------------
+MemRead:  1
+MemWrite:  0
+Branch:  0
+MemToReg:  1
+RegWrite:  1
+Zero:  0
+ALUResult: 104
+SWValue: 10a
+WriteRegNum:  10
+
+MEM/WB Write-----------------------
 MemToReg:  1
 RegWrite:  1
 ALUResult: 104
 WriteRegNum:  10
 LWDataValue:  4
 
--------------WB-------------
+MEM/WB Read-----------------------
 MemToReg:  x
 RegWrite:  0
-LWDataValue:  x
 ALUResult: 108
 WriteRegNum:  2
+LWDataValue:  x
 
 ------------Registers-------------
 Regs[0] = 0
@@ -375,17 +565,44 @@ GlobalPC: x7a018
 Inst: x81180000
 IncrPC: x7a018
 
--------------ID-------------
-Instruction: x1224820
-IncrPC: x7a014
-ReadReg1Value: x109
-ReadReg2Value: x102
+IF/ID Write ----------------
+Inst = x81180000
+IF/ID Read ------------------
+Inst = x1224820
+
+ID/EX Write ----------------
+RegDst:  1
+ALUSrc:  0
+ALUOp:  2
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 109
+ReadReg2Value: 102
 SEOffset:  x
 WriteReg_20_16:  9
 WriteReg_15_11:  9
 Function:  32
 
--------------EX-------------
+ID/EX Read ------------------
+RegDst:  1
+ALUSrc:  0
+ALUOp:  2
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 109
+ReadReg2Value: 106
+SEOffset:  x
+WriteReg_20_16:  9
+WriteReg_15_11:  7
+Function:  32
+
+EX/MEM Write-------------------
 MemRead:  0
 MemWrite:  0
 Branch:  0
@@ -396,19 +613,30 @@ ALUResult: 20f
 SWValue: 106
 WriteRegNum:  7
 
--------------MEM-------------
+EX/MEM Read-------------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  1
+Zero:  0
+ALUResult: 207
+SWValue: 103
+WriteRegNum:  3
+
+MEM/WB Write-----------------------
 MemToReg:  0
 RegWrite:  1
 ALUResult: 207
 WriteRegNum:  3
 LWDataValue:  x
 
--------------WB-------------
+MEM/WB Read-----------------------
 MemToReg:  1
 RegWrite:  1
-LWDataValue:  4
 ALUResult: 104
 WriteRegNum:  10
+LWDataValue:  4
 
 ------------Registers-------------
 Regs[0] = 0
@@ -449,17 +677,44 @@ GlobalPC: x7a01c
 Inst: x81510010
 IncrPC: x7a01c
 
--------------ID-------------
-Instruction: x81180000
-IncrPC: x7a018
-ReadReg1Value: x108
-ReadReg2Value: x118
+IF/ID Write ----------------
+Inst = x81510010
+IF/ID Read ------------------
+Inst = x81180000
+
+ID/EX Write ----------------
+RegDst:  0
+ALUSrc:  1
+ALUOp:  0
+MemRead:  1
+Memwrite:  0
+MemToReg:  1
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 108
+ReadReg2Value: 118
 SEOffset:  0
 WriteReg_20_16:  8
 WriteReg_15_11:  24
 Function:  x
 
--------------EX-------------
+ID/EX Read ------------------
+RegDst:  1
+ALUSrc:  0
+ALUOp:  2
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 109
+ReadReg2Value: 102
+SEOffset:  x
+WriteReg_20_16:  9
+WriteReg_15_11:  9
+Function:  32
+
+EX/MEM Write-------------------
 MemRead:  0
 MemWrite:  0
 Branch:  0
@@ -470,19 +725,30 @@ ALUResult: 20b
 SWValue: 102
 WriteRegNum:  9
 
--------------MEM-------------
+EX/MEM Read-------------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  1
+Zero:  0
+ALUResult: 20f
+SWValue: 106
+WriteRegNum:  7
+
+MEM/WB Write-----------------------
 MemToReg:  0
 RegWrite:  1
 ALUResult: 20f
 WriteRegNum:  7
 LWDataValue:  x
 
--------------WB-------------
+MEM/WB Read-----------------------
 MemToReg:  0
 RegWrite:  1
-LWDataValue:  x
 ALUResult: 207
 WriteRegNum:  3
+LWDataValue:  x
 
 ------------Registers-------------
 Regs[0] = 0
@@ -523,17 +789,44 @@ GlobalPC: x7a020
 Inst: x624022
 IncrPC: x7a020
 
--------------ID-------------
-Instruction: x81510010
-IncrPC: x7a01c
-ReadReg1Value: x4
-ReadReg2Value: x111
+IF/ID Write ----------------
+Inst = x624022
+IF/ID Read ------------------
+Inst = x81510010
+
+ID/EX Write ----------------
+RegDst:  0
+ALUSrc:  1
+ALUOp:  0
+MemRead:  1
+Memwrite:  0
+MemToReg:  1
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 4
+ReadReg2Value: 111
 SEOffset:  16
 WriteReg_20_16:  10
 WriteReg_15_11:  17
 Function:  x
 
--------------EX-------------
+ID/EX Read ------------------
+RegDst:  0
+ALUSrc:  1
+ALUOp:  0
+MemRead:  1
+Memwrite:  0
+MemToReg:  1
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 108
+ReadReg2Value: 118
+SEOffset:  0
+WriteReg_20_16:  8
+WriteReg_15_11:  24
+Function:  x
+
+EX/MEM Write-------------------
 MemRead:  1
 MemWrite:  0
 Branch:  0
@@ -544,19 +837,30 @@ ALUResult: 108
 SWValue: 118
 WriteRegNum:  24
 
--------------MEM-------------
+EX/MEM Read-------------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  1
+Zero:  0
+ALUResult: 20b
+SWValue: 102
+WriteRegNum:  9
+
+MEM/WB Write-----------------------
 MemToReg:  0
 RegWrite:  1
 ALUResult: 20b
 WriteRegNum:  9
 LWDataValue:  x
 
--------------WB-------------
+MEM/WB Read-----------------------
 MemToReg:  0
 RegWrite:  1
-LWDataValue:  x
 ALUResult: 20f
 WriteRegNum:  7
+LWDataValue:  x
 
 ------------Registers-------------
 Regs[0] = 0
@@ -597,17 +901,44 @@ GlobalPC: x7a024
 Inst: x0
 IncrPC: x7a024
 
--------------ID-------------
-Instruction: x624022
-IncrPC: x7a020
-ReadReg1Value: x207
-ReadReg2Value: x102
+IF/ID Write ----------------
+Inst = x0
+IF/ID Read ------------------
+Inst = x624022
+
+ID/EX Write ----------------
+RegDst:  1
+ALUSrc:  0
+ALUOp:  2
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 207
+ReadReg2Value: 102
 SEOffset:  x
 WriteReg_20_16:  3
 WriteReg_15_11:  8
 Function:  34
 
--------------EX-------------
+ID/EX Read ------------------
+RegDst:  0
+ALUSrc:  1
+ALUOp:  0
+MemRead:  1
+Memwrite:  0
+MemToReg:  1
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 4
+ReadReg2Value: 111
+SEOffset:  16
+WriteReg_20_16:  10
+WriteReg_15_11:  17
+Function:  x
+
+EX/MEM Write-------------------
 MemRead:  1
 MemWrite:  0
 Branch:  0
@@ -618,19 +949,30 @@ ALUResult: 14
 SWValue: 111
 WriteRegNum:  17
 
--------------MEM-------------
+EX/MEM Read-------------------
+MemRead:  1
+MemWrite:  0
+Branch:  0
+MemToReg:  1
+RegWrite:  1
+Zero:  0
+ALUResult: 108
+SWValue: 118
+WriteRegNum:  24
+
+MEM/WB Write-----------------------
 MemToReg:  1
 RegWrite:  1
 ALUResult: 108
 WriteRegNum:  24
 LWDataValue:  258
 
--------------WB-------------
+MEM/WB Read-----------------------
 MemToReg:  0
 RegWrite:  1
-LWDataValue:  x
 ALUResult: 20b
 WriteRegNum:  9
+LWDataValue:  x
 
 ------------Registers-------------
 Regs[0] = 0
@@ -671,17 +1013,44 @@ GlobalPC: x7a028
 Inst: x0
 IncrPC: x7a028
 
--------------ID-------------
-Instruction: x0
-IncrPC: x7a024
-ReadReg1Value: x0
-ReadReg2Value: x0
+IF/ID Write ----------------
+Inst = x0
+IF/ID Read ------------------
+Inst = x0
+
+ID/EX Write ----------------
+RegDst:  0
+ALUSrc:  0
+ALUOp:  0
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  0
+IncrPC: 0
+ReadReg1Value: 0
+ReadReg2Value: 0
 SEOffset:  0
 WriteReg_20_16:  0
 WriteReg_15_11:  0
 Function:  0
 
--------------EX-------------
+ID/EX Read ------------------
+RegDst:  1
+ALUSrc:  0
+ALUOp:  2
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  1
+IncrPC: 0
+ReadReg1Value: 207
+ReadReg2Value: 102
+SEOffset:  x
+WriteReg_20_16:  3
+WriteReg_15_11:  8
+Function:  34
+
+EX/MEM Write-------------------
 MemRead:  0
 MemWrite:  0
 Branch:  0
@@ -692,19 +1061,30 @@ ALUResult: 309
 SWValue: 102
 WriteRegNum:  8
 
--------------MEM-------------
+EX/MEM Read-------------------
+MemRead:  1
+MemWrite:  0
+Branch:  0
+MemToReg:  1
+RegWrite:  1
+Zero:  0
+ALUResult: 14
+SWValue: 111
+WriteRegNum:  17
+
+MEM/WB Write-----------------------
 MemToReg:  1
 RegWrite:  1
 ALUResult: 14
 WriteRegNum:  17
 LWDataValue:  20
 
--------------WB-------------
+MEM/WB Read-----------------------
 MemToReg:  1
 RegWrite:  1
-LWDataValue:  258
 ALUResult: 108
 WriteRegNum:  24
+LWDataValue:  258
 
 ------------Registers-------------
 Regs[0] = 0
@@ -745,17 +1125,44 @@ GlobalPC: x7a02c
 Inst: x0
 IncrPC: x7a02c
 
--------------ID-------------
-Instruction: x0
-IncrPC: x7a028
-ReadReg1Value: x0
-ReadReg2Value: x0
+IF/ID Write ----------------
+Inst = x0
+IF/ID Read ------------------
+Inst = x0
+
+ID/EX Write ----------------
+RegDst:  0
+ALUSrc:  0
+ALUOp:  0
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  0
+IncrPC: 0
+ReadReg1Value: 0
+ReadReg2Value: 0
 SEOffset:  0
 WriteReg_20_16:  0
 WriteReg_15_11:  0
 Function:  0
 
--------------EX-------------
+ID/EX Read ------------------
+RegDst:  0
+ALUSrc:  0
+ALUOp:  0
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  0
+IncrPC: 0
+ReadReg1Value: 0
+ReadReg2Value: 0
+SEOffset:  0
+WriteReg_20_16:  0
+WriteReg_15_11:  0
+Function:  0
+
+EX/MEM Write-------------------
 MemRead:  0
 MemWrite:  0
 Branch:  0
@@ -766,19 +1173,30 @@ ALUResult: 0
 SWValue: 0
 WriteRegNum:  0
 
--------------MEM-------------
+EX/MEM Read-------------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  1
+Zero:  0
+ALUResult: 309
+SWValue: 102
+WriteRegNum:  8
+
+MEM/WB Write-----------------------
 MemToReg:  0
 RegWrite:  1
 ALUResult: 309
 WriteRegNum:  8
 LWDataValue:  x
 
--------------WB-------------
+MEM/WB Read-----------------------
 MemToReg:  1
 RegWrite:  1
-LWDataValue:  20
 ALUResult: 14
 WriteRegNum:  17
+LWDataValue:  20
 
 ------------Registers-------------
 Regs[0] = 0
@@ -819,17 +1237,44 @@ GlobalPC: x7a030
 Inst: x0
 IncrPC: x7a030
 
--------------ID-------------
-Instruction: x0
-IncrPC: x7a02c
-ReadReg1Value: x0
-ReadReg2Value: x0
+IF/ID Write ----------------
+Inst = x0
+IF/ID Read ------------------
+Inst = x0
+
+ID/EX Write ----------------
+RegDst:  0
+ALUSrc:  0
+ALUOp:  0
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  0
+IncrPC: 0
+ReadReg1Value: 0
+ReadReg2Value: 0
 SEOffset:  0
 WriteReg_20_16:  0
 WriteReg_15_11:  0
 Function:  0
 
--------------EX-------------
+ID/EX Read ------------------
+RegDst:  0
+ALUSrc:  0
+ALUOp:  0
+MemRead:  0
+Memwrite:  0
+MemToReg:  0
+RegWrite:  0
+IncrPC: 0
+ReadReg1Value: 0
+ReadReg2Value: 0
+SEOffset:  0
+WriteReg_20_16:  0
+WriteReg_15_11:  0
+Function:  0
+
+EX/MEM Write-------------------
 MemRead:  0
 MemWrite:  0
 Branch:  0
@@ -840,19 +1285,30 @@ ALUResult: 0
 SWValue: 0
 WriteRegNum:  0
 
--------------MEM-------------
+EX/MEM Read-------------------
+MemRead:  0
+MemWrite:  0
+Branch:  0
+MemToReg:  0
+RegWrite:  0
+Zero:  1
+ALUResult: 0
+SWValue: 0
+WriteRegNum:  0
+
+MEM/WB Write-----------------------
 MemToReg:  0
 RegWrite:  0
 ALUResult: 0
 WriteRegNum:  0
 LWDataValue:  x
 
--------------WB-------------
+MEM/WB Read-----------------------
 MemToReg:  0
 RegWrite:  1
-LWDataValue:  x
 ALUResult: 309
 WriteRegNum:  8
+LWDataValue:  x
 
 ------------Registers-------------
 Regs[0] = 0
