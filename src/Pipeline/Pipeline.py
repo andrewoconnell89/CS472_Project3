@@ -192,6 +192,7 @@ class Pipeline(object):
             self.IDEX_W_WriteReg_20_16 = d.rs
             self.IDEX_W_WriteReg_15_11 = d.rd
             self.IDEX_W_Function = d.funct
+            self.IDEX_W_IncrPC = self.IFID_R_IncrPC
         elif d.opcode == 0x20: #lb
             self.IDEX_W_RegDst = 0
             self.IDEX_W_ALUSrc = 1
@@ -207,6 +208,7 @@ class Pipeline(object):
             self.IDEX_W_WriteReg_20_16 = d.rs
             self.IDEX_W_WriteReg_15_11 = d.rt
             self.IDEX_W_Function = 'x'
+            self.IDEX_W_IncrPC = self.IFID_R_IncrPC
         elif d.opcode == 0x28: #sb
             self.IDEX_W_RegDst = 'x'
             self.IDEX_W_ALUSrc = 1
@@ -222,6 +224,7 @@ class Pipeline(object):
             self.IDEX_W_WriteReg_20_16 = d.rs
             self.IDEX_W_WriteReg_15_11 = d.rt
             self.IDEX_W_Function = 'x'
+            self.IDEX_W_IncrPC = self.IFID_R_IncrPC
 
     def EX_stage(self):
         """ Here you'll perform the requested instruction on the spicific

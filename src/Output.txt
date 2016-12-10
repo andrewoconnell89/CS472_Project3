@@ -130,7 +130,7 @@ MemRead:  0
 Memwrite:  1
 MemToReg:  x
 RegWrite:  0
-IncrPC: 0
+IncrPC: 7a004
 ReadReg1Value: 108
 ReadReg2Value: 102
 SEOffset:  0
@@ -242,7 +242,7 @@ MemRead:  1
 Memwrite:  0
 MemToReg:  1
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a008
 ReadReg1Value: 108
 ReadReg2Value: 10a
 SEOffset:  -4
@@ -258,7 +258,7 @@ MemRead:  0
 Memwrite:  1
 MemToReg:  x
 RegWrite:  0
-IncrPC: 0
+IncrPC: 7a004
 ReadReg1Value: 108
 ReadReg2Value: 102
 SEOffset:  0
@@ -354,7 +354,7 @@ MemRead:  0
 Memwrite:  0
 MemToReg:  0
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a00c
 ReadReg1Value: 104
 ReadReg2Value: 103
 SEOffset:  x
@@ -370,7 +370,7 @@ MemRead:  1
 Memwrite:  0
 MemToReg:  1
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a008
 ReadReg1Value: 108
 ReadReg2Value: 10a
 SEOffset:  -4
@@ -466,7 +466,7 @@ MemRead:  0
 Memwrite:  0
 MemToReg:  0
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a010
 ReadReg1Value: 109
 ReadReg2Value: 106
 SEOffset:  x
@@ -482,7 +482,7 @@ MemRead:  0
 Memwrite:  0
 MemToReg:  0
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a00c
 ReadReg1Value: 104
 ReadReg2Value: 103
 SEOffset:  x
@@ -578,7 +578,7 @@ MemRead:  0
 Memwrite:  0
 MemToReg:  0
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a014
 ReadReg1Value: 109
 ReadReg2Value: 102
 SEOffset:  x
@@ -594,7 +594,7 @@ MemRead:  0
 Memwrite:  0
 MemToReg:  0
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a010
 ReadReg1Value: 109
 ReadReg2Value: 106
 SEOffset:  x
@@ -690,7 +690,7 @@ MemRead:  1
 Memwrite:  0
 MemToReg:  1
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a018
 ReadReg1Value: 108
 ReadReg2Value: 118
 SEOffset:  0
@@ -706,7 +706,7 @@ MemRead:  0
 Memwrite:  0
 MemToReg:  0
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a014
 ReadReg1Value: 109
 ReadReg2Value: 102
 SEOffset:  x
@@ -802,7 +802,7 @@ MemRead:  1
 Memwrite:  0
 MemToReg:  1
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a01c
 ReadReg1Value: 4
 ReadReg2Value: 111
 SEOffset:  16
@@ -818,7 +818,7 @@ MemRead:  1
 Memwrite:  0
 MemToReg:  1
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a018
 ReadReg1Value: 108
 ReadReg2Value: 118
 SEOffset:  0
@@ -914,7 +914,7 @@ MemRead:  0
 Memwrite:  0
 MemToReg:  0
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a020
 ReadReg1Value: 207
 ReadReg2Value: 102
 SEOffset:  x
@@ -930,7 +930,7 @@ MemRead:  1
 Memwrite:  0
 MemToReg:  1
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a01c
 ReadReg1Value: 4
 ReadReg2Value: 111
 SEOffset:  16
@@ -1042,7 +1042,7 @@ MemRead:  0
 Memwrite:  0
 MemToReg:  0
 RegWrite:  1
-IncrPC: 0
+IncrPC: 7a020
 ReadReg1Value: 207
 ReadReg2Value: 102
 SEOffset:  x
